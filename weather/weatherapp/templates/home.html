@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if api %}
+    <div class="jumbotron">
+        <h1 class="display-4">Air quality: {{api.0.AQI}}</h1>
+        <hr class="my-4">
+        <p>Area: {{api.0.ReportingArea}} *********** Category: {{api.0.Category.Name}}</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+    {% endif %}
+{% endblock content %}
